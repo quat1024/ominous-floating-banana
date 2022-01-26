@@ -32,28 +32,26 @@ public class CurseProxy {
 		.build();
 	
 	public static void main(String[] args) {
-		OkHttpClient client = new OkHttpClient();
-		
 		try {
-			System.out.println(new FetchAddonBySlug("botania").perform(client));
+			System.out.println(new FetchAddonBySlug("botania").perform(Init.OKHTTP));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		
 		try {
-			System.out.println(new FetchAddonBySlug("botania-fabric").perform(client));
+			System.out.println(new FetchAddonBySlug("botania-fabric").perform(Init.OKHTTP));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		
 		try {
-			System.out.println(new FetchAddonBySlug("qwertyuiopsdfghjklasdasdasd").perform(client));
+			System.out.println(new FetchAddonBySlug("qwertyuiopsdfghjklasdasdasd").perform(Init.OKHTTP));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		
 		try {
-			System.out.println(new FetchAddonBySlug("new-super-quark-pack-deluxe-s-xl-ultra-5g-pro-max").perform(client));
+			System.out.println(new FetchAddonBySlug("new-super-quark-pack-deluxe-s-xl-ultra-5g-pro-max").perform(Init.OKHTTP));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
