@@ -10,6 +10,10 @@ import org.jetbrains.annotations.NotNull;
 import java.io.IOException;
 
 public class Init {
+	public static void log(String bla) {
+		System.out.println(bla);
+	}
+	
 	public static final Gson GSON = new GsonBuilder().create();
 	
 	public static final OkHttpClient OKHTTP = new OkHttpClient.Builder()
@@ -17,7 +21,7 @@ public class Init {
 		.build();
 	
 	private static class RateLimiter implements Interceptor {
-		private long lastRequestTime = 0;
+		private long lastRequestTime = System.currentTimeMillis();
 		
 		@NotNull
 		@Override

@@ -1,5 +1,12 @@
 package agency.highlysuspect.ominousfloatingbanana.curse.types;
 
+import agency.highlysuspect.ominousfloatingbanana.Init;
+import okio.BufferedSource;
+import okio.Okio;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.List;
 
 @SuppressWarnings("ClassCanBeRecord") //GSON doesn't know how to handle records yet.
@@ -63,5 +70,9 @@ public final class CurseManifest {
 			this.fileID = fileID;
 			this.required = required;
 		}
+	}
+	
+	public static CurseManifest read(Path path) throws IOException {
+		return Init.GSON.fromJson(Files.newBufferedReader(path), CurseManifest.class);
 	}
 }

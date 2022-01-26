@@ -6,6 +6,7 @@ import agency.highlysuspect.ominousfloatingbanana.curse.types.ForgeSvcAddonMeta;
 import com.google.gson.JsonArray;
 import com.google.gson.reflect.TypeToken;
 import okhttp3.Headers;
+import okhttp3.HttpUrl;
 import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -13,14 +14,12 @@ import okhttp3.RequestBody;
 import okhttp3.Response;
 import okio.BufferedSink;
 import okio.Okio;
-import okio.Sink;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * Services for interacting with the "real" CurseForge API
@@ -61,7 +60,9 @@ public class ForgeSvc {
 		}
 	}
 	
-	public static String downloadUrl(OkHttpClient client, int projectId, int fileId) throws IOException {
+	public static HttpUrl getDownloadUrl(OkHttpClient client, int projectId, int fileId) throws IOException {
+		Init.log("Getting download URL for projectId " + projectId + " fileId " + fileId);
+		
 		Request request = new Request.Builder()
 			.url(API + "/addon/" + projectId + "/file/" + fileId + "/download-url")
 			.headers(HEADERS).get().build();
@@ -69,14 +70,18 @@ public class ForgeSvc {
 		try(Response response = client.newCall(request).execute()) {
 			//It has double quotes around it lol
 			String lmao = response.body().string();
-			return lmao.substring(1, lmao.length() - 1);
+			return HttpUrl.parse(lmao.substring(1, lmao.length() - 1));
 		}
 	}
 	
-	public static void download(OkHttpClient client, int projectId, int fileId, String filename, Path modsFolder) throws IOException {
-		Path targetPath = modsFolder.resolve(filename);
+	public static void downloadMod(OkHttpClient client, int projectId, int fileId, Path modsFolder) throws IOException {
+		HttpUrl downloadUrl = getDownloadUrl(client, projectId, fileId);
+		Init.log("Will download from " + downloadUrl);
 		
-		String downloadUrl = downloadUrl(client, projectId, fileId);
+		//todo: blindly trusting that this filename will work on this system might not be a great idea
+		String fileName = downloadUrl.pathSegments().get(downloadUrl.pathSize() - 1);
+		Path targetPath = modsFolder.resolve(fileName);
+		
 		Request request = new Request.Builder().url(downloadUrl)
 			.headers(HEADERS).get().build();
 		
@@ -84,20 +89,22 @@ public class ForgeSvc {
 		    BufferedSink sink = Okio.buffer(Okio.sink(targetPath))) {
 			sink.writeAll(response.body().source());
 		}
+		
+		Init.log("Downloaded");
 	}
 	
-	public static void main(String[] args) throws IOException {
-		String manifestJson = Files.readString(Paths.get("crap/crucial 2 manifest SMALL.json").toAbsolutePath());
-		CurseManifest manifest = Init.GSON.fromJson(manifestJson, CurseManifest.class);
-		
-		Path modsFolder = Paths.get("crap/run/mods/");
-		Files.createDirectories(modsFolder);
-		
-		//List<ForgeSvcAddonMeta> yes = bulkMetadata(Init.OKHTTP, manifest.files.stream().map(file -> file.projectID).collect(Collectors.toList()));
-		for(CurseManifest.File file : manifest.files) {
-			download(Init.OKHTTP, file.projectID, file.fileID, /* todo */ file.projectID + ".jar", modsFolder);
-		}
-		
-		System.out.println("hi");
-	}
+//	public static void main(String[] args) throws IOException {
+//		String manifestJson = Files.readString(Paths.get("crap/crucial 2 manifest SMALL.json").toAbsolutePath());
+//		CurseManifest manifest = Init.GSON.fromJson(manifestJson, CurseManifest.class);
+//		
+//		Path modsFolder = Paths.get("crap/run/mods/");
+//		Files.createDirectories(modsFolder);
+//		
+//		//List<ForgeSvcAddonMeta> yes = bulkMetadata(Init.OKHTTP, manifest.files.stream().map(file -> file.projectID).collect(Collectors.toList()));
+//		for(CurseManifest.File file : manifest.files) {
+//			downloadMod(Init.OKHTTP, file.projectID, file.fileID, modsFolder);
+//		}
+//		
+//		System.out.println("hi");
+//	}
 }

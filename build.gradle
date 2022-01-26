@@ -1,10 +1,15 @@
 plugins {
 	id 'java'
 	id 'com.github.johnrengelman.shadow' version '7.1.2' //I love Gradle. I love gradle
+	id 'application'
 }
 
 group 'agency.highlysuspect'
 version '0.0.0.0.0.0.0.0'
+
+application {
+	mainClass = "agency.highlysuspect.ominousfloatingbanana.Cli"
+}
 
 repositories {
     mavenCentral()
