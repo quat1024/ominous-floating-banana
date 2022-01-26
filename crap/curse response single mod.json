@@ -1,0 +1,396 @@
+{
+	"id": 416471,
+	"name": "Seasonals",
+	"authors": [
+		{
+			"name": "catscythee",
+			"url": "https://www.curseforge.com/members/100517931-catscythee?username=catscythee",
+			"projectId": 416471,
+			"id": 411579,
+			"projectTitleId": 2,
+			"projectTitleTitle": "Author",
+			"userId": 100517931,
+			"twitchId": 117594725
+		}, {
+			"name": "uraneptus",
+			"url": "https://www.curseforge.com/members/51615076-uraneptus?username=uraneptus",
+			"projectId": 416471,
+			"id": 474757,
+			"projectTitleId": 2,
+			"projectTitleTitle": "Author",
+			"userId": 51615076,
+			"twitchId": 226583379
+		}
+	],
+	"attachments": [
+		{
+			"id": 329335,
+			"projectId": 416471,
+			"description": "",
+			"isDefault": true,
+			"thumbnailUrl": "https://media.forgecdn.net/avatars/thumbnails/329/335/256/256/637454741656689373.png",
+			"title": "637454741656689373.png",
+			"url": "https://media.forgecdn.net/avatars/329/335/637454741656689373.png",
+			"status": 1
+		}, {
+			"id": 309781,
+			"projectId": 416471,
+			"description": "",
+			"isDefault": false,
+			"thumbnailUrl": "https://media.forgecdn.net/avatars/thumbnails/309/781/256/256/637396217758236787.png",
+			"title": "637396217758236787.png",
+			"url": "https://media.forgecdn.net/avatars/309/781/637396217758236787.png",
+			"status": 1
+		}, {
+			"id": 309980,
+			"projectId": 416471,
+			"description": "",
+			"isDefault": false,
+			"thumbnailUrl": "https://media.forgecdn.net/avatars/thumbnails/309/980/256/256/637396947894473360.png",
+			"title": "637396947894473360.png",
+			"url": "https://media.forgecdn.net/avatars/309/980/637396947894473360.png",
+			"status": 1
+		}, {
+			"id": 310672,
+			"projectId": 416471,
+			"description": "",
+			"isDefault": false,
+			"thumbnailUrl": "https://media.forgecdn.net/avatars/thumbnails/310/672/256/256/637399595519258038.png",
+			"title": "637399595519258038.png",
+			"url": "https://media.forgecdn.net/avatars/310/672/637399595519258038.png",
+			"status": 1
+		}, {
+			"id": 331821,
+			"projectId": 416471,
+			"description": "",
+			"isDefault": false,
+			"thumbnailUrl": "https://media.forgecdn.net/attachments/thumbnails/331/821/310/172/cake.PNG",
+			"title": "Sweet Berry Cake Recipe",
+			"url": "https://media.forgecdn.net/attachments/331/821/cake.PNG",
+			"status": 1
+		}, {
+			"id": 331816,
+			"projectId": 416471,
+			"description": "",
+			"isDefault": false,
+			"thumbnailUrl": "https://media.forgecdn.net/attachments/thumbnails/331/816/310/172/feast.PNG",
+			"title": "Pumpkin Feast Recipe",
+			"url": "https://media.forgecdn.net/attachments/331/816/feast.PNG",
+			"status": 1
+		}, {
+			"id": 331809,
+			"projectId": 416471,
+			"description": "",
+			"isDefault": false,
+			"thumbnailUrl": "https://media.forgecdn.net/attachments/thumbnails/331/809/310/172/cooked_pumpkin.PNG",
+			"title": "Roasted Pumpkin Recipe",
+			"url": "https://media.forgecdn.net/attachments/331/809/cooked_pumpkin.PNG",
+			"status": 1
+		}, {
+			"id": 331820,
+			"projectId": 416471,
+			"description": "",
+			"isDefault": false,
+			"thumbnailUrl": "https://media.forgecdn.net/attachments/thumbnails/331/820/310/172/milkshake.PNG",
+			"title": "Sweet Berry Milkshake",
+			"url": "https://media.forgecdn.net/attachments/331/820/milkshake.PNG",
+			"status": 1
+		}, {
+			"id": 322350,
+			"projectId": 416471,
+			"description": "",
+			"isDefault": false,
+			"thumbnailUrl": "https://media.forgecdn.net/attachments/thumbnails/322/350/310/172/2020-11-08_22.png",
+			"title": "Smell of Pumpkin wafting through the evening air...",
+			"url": "https://media.forgecdn.net/attachments/322/350/2020-11-08_22.png",
+			"status": 1
+		}, {
+			"id": 331818,
+			"projectId": 416471,
+			"description": "",
+			"isDefault": false,
+			"thumbnailUrl": "https://media.forgecdn.net/attachments/thumbnails/331/818/310/172/ice_cream.PNG",
+			"title": "Sweet Berry Ice Cream Recipe",
+			"url": "https://media.forgecdn.net/attachments/331/818/ice_cream.PNG",
+			"status": 1
+		}, {
+			"id": 331815,
+			"projectId": 416471,
+			"description": "",
+			"isDefault": false,
+			"thumbnailUrl": "https://media.forgecdn.net/attachments/thumbnails/331/815/310/172/muffin.PNG",
+			"title": "Chocolate Pumpkin Muffin Recipe",
+			"url": "https://media.forgecdn.net/attachments/331/815/muffin.PNG",
+			"status": 1
+		}, {
+			"id": 331811,
+			"projectId": 416471,
+			"description": "",
+			"isDefault": false,
+			"thumbnailUrl": "https://media.forgecdn.net/attachments/thumbnails/331/811/310/172/ice_cream.PNG",
+			"title": "Pumpkin Ice Cream Recipe",
+			"url": "https://media.forgecdn.net/attachments/331/811/ice_cream.PNG",
+			"status": 1
+		}, {
+			"id": 331812,
+			"projectId": 416471,
+			"description": "",
+			"isDefault": false,
+			"thumbnailUrl": "https://media.forgecdn.net/attachments/thumbnails/331/812/310/172/block.PNG",
+			"title": "Pumpkin Ice Cream Block Recipe",
+			"url": "https://media.forgecdn.net/attachments/331/812/block.PNG",
+			"status": 1
+		}, {
+			"id": 331814,
+			"projectId": 416471,
+			"description": "",
+			"isDefault": false,
+			"thumbnailUrl": "https://media.forgecdn.net/attachments/thumbnails/331/814/310/172/cake.PNG",
+			"title": "Pumpkin Cake Recipe",
+			"url": "https://media.forgecdn.net/attachments/331/814/cake.PNG",
+			"status": 1
+		}, {
+			"id": 322358,
+			"projectId": 416471,
+			"description": "",
+			"isDefault": false,
+			"thumbnailUrl": "https://media.forgecdn.net/attachments/thumbnails/322/358/310/172/2020-11-11_17.png",
+			"title": "Sweet Berry treats on a cold night...",
+			"url": "https://media.forgecdn.net/attachments/322/358/2020-11-11_17.png",
+			"status": 1
+		}, {
+			"id": 331823,
+			"projectId": 416471,
+			"description": "",
+			"isDefault": false,
+			"thumbnailUrl": "https://media.forgecdn.net/attachments/thumbnails/331/823/310/172/yogurt.PNG",
+			"title": "Sweet Berry Vanilla Yogurt",
+			"url": "https://media.forgecdn.net/attachments/331/823/yogurt.PNG",
+			"status": 1
+		}, {
+			"id": 331819,
+			"projectId": 416471,
+			"description": "",
+			"isDefault": false,
+			"thumbnailUrl": "https://media.forgecdn.net/attachments/thumbnails/331/819/310/172/ice_cream_block.PNG",
+			"title": "Sweet Berry Ice Cream Block Recipe",
+			"url": "https://media.forgecdn.net/attachments/331/819/ice_cream_block.PNG",
+			"status": 1
+		}, {
+			"id": 331813,
+			"projectId": 416471,
+			"description": "",
+			"isDefault": false,
+			"thumbnailUrl": "https://media.forgecdn.net/attachments/thumbnails/331/813/310/172/milkshake.PNG",
+			"title": "Pumpkin Milkshake Recipe",
+			"url": "https://media.forgecdn.net/attachments/331/813/milkshake.PNG",
+			"status": 1
+		}
+	],
+	"wikiUrl": "",
+	"websiteUrl": "https://www.curseforge.com/minecraft/mc-mods/seasonals",
+	"gameId": 432,
+	"summary": "Adds seasonal foods to Team Abnormals' Neapolitan mod.",
+	"defaultFileId": 3563895,
+	"downloadCount": 379876.0,
+	"latestFiles": [
+		{
+			"id": 3563895,
+			"displayName": "seasonals-1.16.5-2.0.2",
+			"fileName": "seasonals-1.16.5-2.0.2.jar",
+			"fileDate": "2021-12-12T18:29:23.91Z",
+			"fileLength": 71695,
+			"releaseType": 1,
+			"fileStatus": 4,
+			"downloadUrl": "https://edge.forgecdn.net/files/3563/895/seasonals-1.16.5-2.0.2.jar",
+			"isAlternate": false,
+			"alternateFileId": 0,
+			"dependencies": [
+				{
+					"id": 80824590,
+					"addonId": 365045,
+					"type": 2,
+					"fileId": 3563895
+				}, {
+					"id": 80824591,
+					"addonId": 355589,
+					"type": 2,
+					"fileId": 3563895
+				}, {
+					"id": 80824589,
+					"addonId": 362393,
+					"type": 2,
+					"fileId": 3563895
+				}, {
+					"id": 80824593,
+					"addonId": 382016,
+					"type": 3,
+					"fileId": 3563895
+				}, {
+					"id": 80824592,
+					"addonId": 382216,
+					"type": 3,
+					"fileId": 3563895
+				}
+			],
+			"isAvailable": true,
+			"modules": [
+				{
+					"foldername": "META-INF",
+					"fingerprint": 3611997193,
+					"type": 3
+				}, {
+					"foldername": "com",
+					"fingerprint": 1979803436,
+					"type": 3
+				}, {
+					"foldername": "assets",
+					"fingerprint": 133434244,
+					"type": 3
+				}, {
+					"foldername": "data",
+					"fingerprint": 2865214673,
+					"type": 3
+				}, {
+					"foldername": "pack.mcmeta",
+					"fingerprint": 1508653319,
+					"type": 3
+				}, {
+					"foldername": "seasonals.png",
+					"fingerprint": 225378514,
+					"type": 3
+				}, {
+					"foldername": "seasonalssprite.png",
+					"fingerprint": 692111386,
+					"type": 3
+				}
+			],
+			"packageFingerprint": 2082455267,
+			"gameVersion": ["1.16.5", "Forge"],
+			"sortableGameVersion": [
+				{
+					"gameVersionPadded": "0000000001.0000000016.0000000005",
+					"gameVersion": "1.16.5",
+					"gameVersionReleaseDate": "2021-01-15T14:14:48.91Z",
+					"gameVersionName": "1.16.5",
+					"gameVersionTypeId": 70886
+				}, {
+					"gameVersionPadded": "0",
+					"gameVersion": "",
+					"gameVersionReleaseDate": "2019-08-01T00:00:00Z",
+					"gameVersionName": "Forge",
+					"gameVersionTypeId": 68441
+				}
+			],
+			"installMetadata": null,
+			"changelog": null,
+			"hasInstallScript": false,
+			"isCompatibleWithClient": true,
+			"categorySectionPackageType": 6,
+			"restrictProjectFileAccess": 1,
+			"projectStatus": 4,
+			"renderCacheId": 2629805,
+			"fileLegacyMappingId": null,
+			"projectId": 416471,
+			"parentProjectFileId": null,
+			"parentFileLegacyMappingId": null,
+			"fileTypeId": null,
+			"exposeAsAlternative": null,
+			"packageFingerprintId": 806932302,
+			"gameVersionDateReleased": "2008-03-01T06:00:00Z",
+			"gameVersionMappingId": 3561395,
+			"gameVersionId": 4458,
+			"gameId": 432,
+			"isServerPack": false,
+			"serverPackFileId": null,
+			"gameVersionFlavor": null,
+			"hashes": [
+				{
+					"algorithm": 1,
+					"value": "dad3a3f85b49affc526462ca9cae908c40ae0895"
+				}, {
+					"algorithm": 2,
+					"value": "5f0336622e119191baa9307715ee88f2"
+				}
+			],
+			"downloadCount": 744
+		}
+	],
+	"categories": [
+		{
+			"categoryId": 436,
+			"name": "Food",
+			"url": "https://www.curseforge.com/minecraft/mc-mods/mc-food",
+			"avatarUrl": "https://media.forgecdn.net/avatars/6/49/635351499265510402.png",
+			"parentId": 6,
+			"rootId": 6,
+			"projectId": 416471,
+			"avatarId": 6049,
+			"gameId": 432,
+			"slug": "mc-food",
+			"dateModified": "2014-05-08T17:45:26.55Z"
+		}
+	],
+	"status": 4,
+	"primaryCategoryId": 436,
+	"categorySection": {
+		"id": 8,
+		"gameId": 432,
+		"name": "Mods",
+		"packageType": 6,
+		"path": "mods",
+		"initialInclusionPattern": ".",
+		"extraIncludePattern": null,
+		"gameCategoryId": 6
+	},
+	"slug": "seasonals",
+	"gameVersionLatestFiles": [
+		{
+			"gameVersion": "1.16.5",
+			"projectFileId": 3563895,
+			"projectFileName": "seasonals-1.16.5-2.0.2.jar",
+			"fileType": 1,
+			"gameVersionFlavor": null,
+			"gameVersionTypeId": 70886,
+			"modLoader": 1
+		}, {
+			"gameVersion": "1.16.3",
+			"projectFileId": 3391999,
+			"projectFileName": "seasonals-1.16.5-2.0.0.jar",
+			"fileType": 1,
+			"gameVersionFlavor": null,
+			"gameVersionTypeId": 70886,
+			"modLoader": 1
+		}, {
+			"gameVersion": "1.16.4",
+			"projectFileId": 3391999,
+			"projectFileName": "seasonals-1.16.5-2.0.0.jar",
+			"fileType": 1,
+			"gameVersionFlavor": null,
+			"gameVersionTypeId": 70886,
+			"modLoader": 1
+		}, {
+			"gameVersion": "1.16.1",
+			"projectFileId": 3128284,
+			"projectFileName": "Seasonals-1.16.1-1.2.1.jar",
+			"fileType": 1,
+			"gameVersionFlavor": null,
+			"gameVersionTypeId": 70886,
+			"modLoader": 1
+		}
+	],
+	"isFeatured": false,
+	"popularityScore": 3454.96728515625,
+	"gamePopularityRank": 1610,
+	"primaryLanguage": "enUS",
+	"gameSlug": "minecraft",
+	"modLoaders": ["Forge"],
+	"gameName": "Minecraft",
+	"portalName": "www.curseforge.com",
+	"dateModified": "2021-12-16T00:11:28.02Z",
+	"dateCreated": "2020-10-30T02:29:35.79Z",
+	"dateReleased": "2021-12-12T18:29:23.91Z",
+	"isAvailable": true,
+	"isExperiemental": false,
+	"allowModDistribution": null
+}

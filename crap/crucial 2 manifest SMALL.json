@@ -1,0 +1,34 @@
+{
+	"minecraft": {
+		"version": "1.16.5",
+		"modLoaders": [
+			{
+				"id": "forge-36.2.22",
+				"primary": true
+			}
+		]
+	},
+	"manifestType": "minecraftModpack",
+	"manifestVersion": 1,
+	"name": "Crucial 2",
+	"version": "1.3.10",
+	"author": "Vazkii",
+	"files": [
+		{
+			"projectID": 228525,
+			"fileID": 3474499,
+			"required": true
+		},
+		{
+			"projectID": 238222,
+			"fileID": 3590083,
+			"required": true
+		},
+		{
+			"projectID": 452344,
+			"fileID": 3342861,
+			"required": true
+		}
+	],
+	"overrides": "overrides"
+}
