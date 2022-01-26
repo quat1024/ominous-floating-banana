@@ -1,0 +1,27 @@
+plugins {
+	id 'java'
+	id 'com.github.johnrengelman.shadow' version '7.1.2' //I love Gradle. I love gradle
+}
+
+group 'agency.highlysuspect'
+version '0.0.0.0.0.0.0.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+	//PicoCli; useful tool for making command-line applications
+	// https://github.com/remkop/picocli
+	// https://picocli.info/ (large page)
+	implementation "info.picocli:picocli:4.6.2"
+	
+	//minimal-json; unmaintained but lightweight JSON utilities. Nothing fancy at all.
+	// https://github.com/ralfstx/minimal-json
+	implementation "com.eclipsesource.minimal-json:minimal-json:0.9.5"
+	
+	//OkHttp; an HTTP client. I tried using standard Java HttpsURLConnection utilities and they're awful. Sorry.
+	// https://github.com/square/okhttp
+	// https://square.github.io/okhttp/
+	implementation "com.squareup.okhttp3:okhttp:4.9.3"
+}
