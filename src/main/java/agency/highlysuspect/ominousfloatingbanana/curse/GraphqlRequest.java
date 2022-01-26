@@ -1,8 +1,9 @@
 package agency.highlysuspect.ominousfloatingbanana.curse;
 
-import com.eclipsesource.json.Json;
-import com.eclipsesource.json.JsonObject;
-import com.eclipsesource.json.JsonValue;
+import agency.highlysuspect.ominousfloatingbanana.Init;
+import com.google.gson.Gson;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
 import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -14,7 +15,7 @@ import java.io.IOException;
 
 public interface GraphqlRequest<RESPONSE> {
 	JsonObject requestToJson();
-	RESPONSE parse(JsonValue value);
+	RESPONSE parse(JsonElement value);
 	
 	MediaType APPLICATION_JSON_UTF8 = MediaType.parse("application/json; charset=utf-8");
 	
@@ -33,7 +34,7 @@ public interface GraphqlRequest<RESPONSE> {
 				throw new IOException("Successful connection, but server said " + response.code() + " " + response.message() + "; " + content);
 			}
 			
-			return parse(Json.parse(content));
+			return parse(Init.GSON.fromJson(content, JsonElement.class));
 		} catch (IOException e) {
 			throw new IOException("IOException while connecting", e);
 		}

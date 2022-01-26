@@ -17,15 +17,6 @@ public class CurseProxy {
 		.add("X-FunFact", "Dragons are pretty neat honestly")
 		.build();
 	
-	public static record Addon(
-		int id,
-		CategorySection categorySection
-	) {}
-	
-	public static record CategorySection(
-		int id
-	) {}
-	
 	public static void main(String[] args) {
 		OkHttpClient client = new OkHttpClient();
 		Supplier<Request.Builder> requestBuilder = () -> new Request.Builder().url(ENDPOINT).headers(HEADERS);
