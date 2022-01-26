@@ -1,7 +1,9 @@
-Ominous FLoating Banana
+Ominous Floating Banana
 =======================
 
 Tool to manage curseforge modpacks or something?
+
+![high constrast banana (scary)](./crap/banana.jpg)
 
 Uses CurseProxy https://curse.nikky.moe/ and interfaces with it using a super shitty graphql client i slapped together lol
 
