@@ -19,10 +19,10 @@ dependencies {
 	//PicoCli; useful tool for making command-line applications
 	// https://github.com/remkop/picocli
 	// https://picocli.info/ (large page)
-	implementation "info.picocli:picocli:4.6.2"
+	implementation 'info.picocli:picocli:4.6.3'
 	
 	//Gson. The library that just won't fucking die.
-	implementation "com.google.code.gson:gson:2.8.9"
+	implementation 'com.google.code.gson:gson:2.9.0'
 	
 	//OkHttp; an HTTP client. I tried using standard Java HttpsURLConnection utilities and they're awful. Sorry.
 	// https://github.com/square/okhttp
