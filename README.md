@@ -28,8 +28,6 @@ If you are looking for a tool that does some (or all) of those things, I recomme
 
 # Usage
 
-(Well first I have to figure out how to compile it; you'd probably have an `ominous-floating-banana.jar`, right?)
-
 0. Gitignore your `mods/` folder.
 1. Check that `java --version` refers to Java 16 or newer on your computer.
 2. Place `ominous-floating-banana.jar` *inside* the Minecraft instance directory.
@@ -104,6 +102,11 @@ Even though the formats are "compatible", at the moment you shouldn't *actually*
 
 I don't know.
 
-## Building
+# Building
 
-I think you need to use `shade` or something, to get a runnable standaone jar without having to mess with java -cp? Not sure.
+* Run the `shadowJar` gradle task.
+* Distribute `./build/libs/ominous-floating-banana-(version)-all.jar` (with the -all suffix), I think?
+  * There's tasks like `assembleShadowDist` that make weird "distributions" with batch scripts and shit idk i dont like it
+* Can you tell I've never done this before
+
+Might want to look into OkHttp or GSON alternatives for filesize reasons. They are so nice to use though lol.
