@@ -1,3 +1,7 @@
+# Uhhh
+
+Many of these files date to when this project was... way different from what it is now (i don't even know what i was trying to make, tbh). This is just assorted notes and analysis of what the curse api responds with
+
 ### crucial 2 manifest.json
 
 The manifest.json from Crucial 2

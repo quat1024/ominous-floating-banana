@@ -36,13 +36,6 @@ public class Cli {
 	@CommandLine.Command(mixinStandardHelpOptions = true, description = "Download a manifest full of mods.")
 	public static class SyncCommand implements Callable<Integer> {
 		@CommandLine.Option(
-			names = "--rate-limit",
-			description = "Minimum time (in milliseconds) between HTTP requests.",
-			defaultValue = "1000"
-		)
-		public long rateLimit;
-		
-		@CommandLine.Option(
 			names = "--manifest-path",
 			description = "Path to manifest file.",
 			defaultValue = "ofb-manifest.json",
@@ -66,6 +59,13 @@ public class Cli {
 			}
 		)
 		public boolean dryRun;
+		
+		@CommandLine.Option(
+			names = "--rate-limit",
+			description = "Minimum time (in milliseconds) between HTTP requests.",
+			defaultValue = "1000"
+		)
+		public long rateLimit;
 		
 		@CommandLine.Option(
 			names = "--user-agent",

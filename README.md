@@ -17,26 +17,26 @@ It is *not*:
 
 * a "Curse modpack downloader";
 * a tool to download and configure a mod *loader*;
-* a tool to download a mod given its name, slug, or anything "nice" like that;
-* a tool to update mods to their latest version (I am interested in adding this)
+* a tool to download a mod given only its name or slug;
+* a tool to automatically check for updates or update mods to their latest version;
 * a tool to download mods from services other than Curse;
 * a tool to distribute a self-hosted modpack to players.
 
 It also does not have an exporter. That... would probably be a good idea to add eventually. (This was always meant to be something you run directly from a launcher instance's directory, so you can use your launcher's instance-exporting commands to get things done for now.)
 
-If you are looking for a tool that does some (or all) of these things, I recommend you check comp's [Big List of Modpack Things](https://gist.github.com/comp500/13ae6f058221196077fb19953ac608c7).
+If you are looking for a tool that does some (or all) of those things, I recommend you check comp's [Big List of Modpack Things](https://gist.github.com/comp500/13ae6f058221196077fb19953ac608c7) and find a more suitable tool.
 
 # Usage
 
-(Well first I have to figure out how to compile it; you'd probably have an `ominous-floating-banana.jar`.)
+(Well first I have to figure out how to compile it; you'd probably have an `ominous-floating-banana.jar`, right?)
 
-1. **VERY IMPORTANT:** Add `.ofb/` and `mods/` to your .gitignore!!!
-2. Check that `java --version` refers to Java 16 or newer on your computer.
-3. Place `ominous-floating-banana.jar` *inside* the Minecraft instance directory.
+0. Gitignore your `mods/` folder.
+1. Check that `java --version` refers to Java 16 or newer on your computer.
+2. Place `ominous-floating-banana.jar` *inside* the Minecraft instance directory.
    * It should go next to `options.txt` and be *adjacent* to all the folders like `run`, `mods` etc.
-   * You don't have to gitignore it.
-4. Next to it, place a manifest file named `ofb-manifest.json`.
-5. Running `java -jar ominous-floating-banana.jar sync` will proceed to synchronize the contents of the `mods/` directory with what is specified in the manifest.
+   * You don't have to gitignore it (think of it like a Gradle wrapper)
+3. Next to it, place a manifest file named `ofb-manifest.json`, see below for what these are.
+4. Running `java -jar ominous-floating-banana.jar sync` will proceed to synchronize the contents of the `mods/` directory with what is specified in the manifest.
 
 It is very noisy and logs a whole bunch of stuff.
 
@@ -44,11 +44,11 @@ Main knobs to turn:
 
 * `--manifest-path ./some/file.json` changes the manifest file (defaults to `./ofb-manifest.json`)
 * `--destination-path ./some/other/path` changes the mods directory (it will be created if it does not exist, defaults to `./mods`)
-* `--dry-run` will have OFB retrieve and log download URLs for all the mods, but won't actually download them
+* `--dry-run` will have OFB retrieve and log download URLs for all the mods, but won't actually sync them
 
 It is a [picocli CLI](https://picocli.info/), so picocli features are available too, like `--help`.
 
-# Notes on downloading
+# Notes on syncing
 
 OFB really, *really* tries to avoid accessing the Curse API if it doesn't have to. You may have to babysit it a little.
 
@@ -92,11 +92,13 @@ OFB really, *really* tries to avoid accessing the Curse API if it doesn't have t
 * As described above, if a file with the name specified in `filename` exists in the destination directory, OFB will make no attempt to redownload it. (This is the only caching mechanism.)
 * `projectID` and `fileID` are interpreted as they are in a Curse manifest.
 
-Even though the formats are "compatible", at the moment you shouldn't *actually* use a Curse manifest as input, b/c it doesn't have the `filename` information, which is critical for the way caching works (so OFB will just redownload the entire thing every time unless you manually populate the filenames). This may change in the future (an "import" command would be nice, I guess)
+Even though the formats are "compatible", at the moment you shouldn't *actually* use a Curse manifest as input, b/c it doesn't have the `filename` information, which is critical for the way caching works (so OFB will just redownload the entire modpack every time, unless you manually populate the filenames). This may change in the future (an "import" command would be nice, I guess)
 
-## Things to look into?
+## Next steps
 
-HTTP caching, maybe - OkHttp has a *very good* filesystem cache that works just like a web browser's cache. It listens to Cache-Control headers (and with Interceptors you can even tack on your own headers). Thing is, caching based off of filename alone works decently well (and doesn't save a duplicate of each file in the cache, either). A powerful cache would be useful if it was saved system-wide, but I don't really want to do that.
+* Code cleanup.
+* Prompt to delete files in `./mods` that aren't referenced in the manifest (bringing it closer to a full "sync", instead of just a "download", i guess)
+* Cache the ((projectID, fileID) -> Curse download URL) lookups indefinitely. This would mean, after the first download, I don't need to store `filename` intrusively if I want a working don't-need-to-redownload-that-file feature. Which would make this a whole lot less brittle.
 
 # Why is it called that?
 
@@ -104,4 +106,4 @@ I don't know.
 
 ## Building
 
-I think you need to use `shade` or something, to get a runnable jar? Not sure.
+I think you need to use `shade` or something, to get a runnable standaone jar without having to mess with java -cp? Not sure.
